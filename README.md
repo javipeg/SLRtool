@@ -8,7 +8,7 @@ This is a simple downloader to obtain references from online digital academic li
 
 This tool is intended for academic use only. It can help download a first list of references that can be used as a starting point when exploring a research field.
 
-This code was put together in a very short amount of time, as an excuse to learn ruby basics. Therefore, it is ugly, crappy and might be full of bugs. Use it and fiddle with it at your own risk ;-)
+This code was put together in a very short amount of time, as an excuse to learn Ruby basics. Therefore, it is ugly, crappy and might be full of bugs. Use it and fiddle with it at your own risk ;-)
 
 Use it with common sense and do not abuse the digital libraries services!
 
