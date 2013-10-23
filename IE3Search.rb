@@ -237,7 +237,7 @@ def search()
 
   # Process first page
   pagecount = 1
-  results_number =  results.at("totalfound").text
+  #results_number =  results.at("totalfound").text
   #puts results_number
 
   bibentries = process_page_results(results)
