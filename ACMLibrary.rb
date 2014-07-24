@@ -19,9 +19,10 @@ def populate
 	Logger.instance.log("ACM bib size:: " + bibentries.size.to_s)
 
 	@library = BibTeX::Bibliography.new
-	bibentries.each { |b|
+	bibentries.each do |b|
+	begin
 
-		if index != 49  # ad-hoc hack to get rid of a problem result of a particular query, TO REMOVE
+	#	if index != 49  # ad-hoc hack to get rid of a problem result of a particular query, TO REMOVE
 		minilib = BibTeX.parse(b[:bibtex])
 
 		puts "Last parsed: " + index.to_s
@@ -34,8 +35,14 @@ def populate
 		end
 	
 		index += 1
-    	Logger.instance.log("Entry: " + index.to_s)
-	}
+		Logger.instance.log("Entry: " + index.to_s)
+		
+		rescue
+			puts "Error caught on entry: " + index.to_s
+			Logger.instance.log("Exception on entry: " + index.to_s)
+			next 
+		end
+	end
 end
 
 #def export
