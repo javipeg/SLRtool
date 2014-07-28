@@ -23,9 +23,13 @@ def initialize(termfilename)
     a.user_agent_alias = 'Mac Safari'
   }
 
-  @maxresults   = 500
-  @maxpages     = 10 # 20 per page
+  # This is needed in order to schedule the download in several bursts
+  @maxresults   = 8000
+  @maxpages     = 400 # 20 per page
   @firstresult  = 1 # 21, 41, 61 ..., 161 
+  #@maxresults   = 500
+  #@maxpages     = 10 # 20 per page
+  #@firstresult  = 1 # 21, 41, 61 ..., 161 
 end
 
 def paper_id_from_link(plink)
@@ -123,7 +127,7 @@ def queryurl()
   queryurl = queryurl + "&" + "dl=GUIDE"
   queryurl = queryurl + "&" + "termshow=matchboolean"
   queryurl = queryurl + "&" + "zadv=1"
-  #queryurl = queryurl + "&" + "since_year=1996"
+  queryurl = queryurl + "&" + "since_year=2004"
   #queryurl = queryurl + "&" + "CFID=231504101&CFTOKEN=11710593"
 
   return queryurl

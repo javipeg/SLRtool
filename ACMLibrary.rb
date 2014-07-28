@@ -22,7 +22,8 @@ def populate
 	bibentries.each do |b|
 	begin
 
-	#	if index != 49  # ad-hoc hack to get rid of a problem result of a particular query, TO REMOVE
+		#if index != 49    # ad-hoc hack to get rid of a problem result of a particular query, TO REMOVE
+
 		minilib = BibTeX.parse(b[:bibtex])
 
 		puts "Last parsed: " + index.to_s
@@ -32,7 +33,7 @@ def populate
 		
 		#library << BibTeX::Entry.new(minilib[0])
 		@library << minilib[0]
-		end
+		#end
 	
 		index += 1
 		Logger.instance.log("Entry: " + index.to_s)
