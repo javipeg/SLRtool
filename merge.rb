@@ -1,7 +1,6 @@
 require 'bibtex'
 require_relative 'BibMerger'
 
-
 #!/usr/bin/env ruby
 
 ARGV.each do|a|

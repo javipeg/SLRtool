@@ -25,7 +25,7 @@ def initialize(termfilename)
   }
   @library = "IEEEXplore"
 
-  @maxresults   = 500 
+  @maxresults   = 1000
   @firstresult  = 1
 end
 
@@ -113,7 +113,7 @@ def bibentry_from_xml(node)
   #keywordsAll = (keywords.flatten) * ","
   
   entry = BibTeX::Entry.new({
-    :type => pubtype,
+    :bibtex_type => pubtype,
     :key => hashed_result["arnumber"],
 
     :address => hashed_result[""],
